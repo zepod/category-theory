@@ -2,11 +2,10 @@ import React from 'react';
 
 type Props = {
   value: string,
-  onMouseEnter: Function,
   onClick: Function
 }
 
-const style = () => ({
+export const style = () => ({
   position: 'relative',
   width: 'max-content',
   float: 'left',
@@ -15,11 +14,10 @@ const style = () => ({
 });
 
 
-const Label = ({ value, onMouseEnter, onClick }: Props) => (
+const Label = ({ value, onClick }: Props) => (
   <div
     style={style()}
     onClick={onClick}
-    onMouseEnter={onMouseEnter}
   >
     {value}
   </div>
